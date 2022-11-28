@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width-device-width,initial-scale=1.0">
+<title>cart</title>
+<link rel="stylesheet" type="text/css" href="style10.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+<div class="navbar">
+<div class="logo">
+<a href="index.html"><img src="images/logo.png" width="125px"></a>
+</div>
+<nav>
+<ul id="MenuItems">
+<li><a href="index.html">HOME</a></li>
+<li><a href="products.html">PRODUCTS</a></li>
+<li><a href="productdetails.html">ABOUT</a></li>
+<li><a href="">CONTACT</a></li>
+<li><a href="account.html">ACCOUNT</a></li>
+</ul>
+</nav>
+<a href="cart.html"><img src="images/cart.png" width="30px" height="30px" ></a>
+ <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" >
+    </div>
+
+ 
+ </div>
+</div>
+
+<!----account page------>
+<div class="account-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="images/image1.png" width="100%">
+      </div>
+
+      <div class="col-2">
+       <div class="form-container">
+        <div class="form-btn">
+          <span onclick="login()">Login</span>
+          <span onclick="register()">Register</span>
+          <hr id="indicator">
+        </div>
+
+        <form id="loginform">
+          <input type="text" placeholder="username">
+          <input type="password" placeholder="password">
+          <button type="submit" class="btn" >Login</button>
+          <a href="">forgot password</a>
+        </form>
+
+         <form id="regform">
+          <input type="text" placeholder="username">
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="password">
+          <button type="submit" class="btn" >Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!--footer-->
+
+<div class="footer">
+        <div class="container">
+       <div class="row">
+           <div class="footer-col-1">
+    <h3>Download Our App</h3>
+    <p>Download App for Android and ios mobile phone</p>
+    <div class="app-logo">
+    <img src="images/play-store.png">
+    <img src="images/app-store.png">
+</div>
+</div>
+<div class="footer-col-2">
+<img src="images/logo.png">
+<p>Our Purpose Is To Sustainably Make the Pleasure and<br> Benefit of Sport Accesible to the Many.</p>
+</div>
+<div class="footer-col-3">
+<h3>Useful Links</h3>
+<ul>
+  <li>coupons</li>
+  <li>Blog Post</li>
+  <li>Return Policy</li>
+  <li>Join Affiliate</li>
+</ul>
+</div>
+<div class="footer-col-4">
+<h3>Follow Us</h3>
+<ul>
+<li>Facebook</li>
+   <li>Twitter</li>
+   <li>Instagram</li>
+   <li>Youtube</li>
+</ul>
+   </div>
+  </div>
+  <hr>
+<P class="copyright">copyright &copy;2020-Easy Tutorials</P>
+ </div>
+</div>
+
+
+<script>
+var MenuItems = document.getElementById("MenuItems");
+
+MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+    {
+    MenuItems.style.maxHeight= "200px"
+    }
+    else
+    {
+    MenuItems.style.maxHeight = "0px";
+
+    }
+
+</script>
+
+<script>
+  var loginform = document.getElementById("loginform");
+   var regform = document.getElementById("regform");
+   var indicator = document.getElementById("indicator");
+
+      function register(){
+
+          regform.style.tranform = "translatex(0px)";
+          loginform.style.tranform = "translatex(0px)";
+          indicator.style.tranform = "translatex(100px)";
+       }
+
+         function Login(){
+
+          regform.style.tranform = "translatex(300px)";
+          loginform.style.tranform = "translatex(300px)";
+          indicator.style.tranform = "translatex(0px)";
+       }
+
+</script>
+
+</body>
+</html>
